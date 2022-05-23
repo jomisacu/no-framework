@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jomisacu\NoFramework\Infrastracture;
+namespace Jomisacu\NoFramework\Infrastructure;
 
 use Jomisacu\NoFramework\Domain\Location;
 
