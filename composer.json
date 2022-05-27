@@ -18,7 +18,8 @@
   "require": {
     "symfony/dotenv": "^5.4",
     "robmorgan/phinx": "^0.12.10",
-    "php-di/php-di": "^6.4"
+    "php-di/php-di": "^6.4",
+    "symfony/http-foundation": "^5.4"
   },
   "scripts": {
     "run-tests": "./vendor/bin/phpunit --bootstrap ./src/Tests/bootstrap.php ./src/Tests",

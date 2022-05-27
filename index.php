@@ -1,10 +1,12 @@
 <?php
 
+use Jomisacu\NoFramework\Infrastructure\Application;
+use Symfony\Component\HttpFoundation\Request;
+
 require __DIR__ . '/bootstrap.php';
 
-$containerBuilder = new \DI\ContainerBuilder();
-$containerBuilder->useAutowiring(true);
-$containerBuilder->addDefinitions(__DIR__.'/config/services.php');
-$container = $containerBuilder->build();
+$application = new Application();
+$request = Request::createFromGlobals();
+$response = $application->handle($request);
 
-echo get_class($container->get(\Jomisacu\NoFramework\Domain\LocationRepositoryInterface::class)) . "\n";
+$response->send();
